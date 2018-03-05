@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NicoProgress_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vtK-nN-Sqq"/>
+                        <viewControllerLayoutGuide type="bottom" id="ihz-3W-NzY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="VeN-F1-ZhF">
+                                <rect key="frame" x="28" y="228" width="319" height="212"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9C-aM-qaK" customClass="NicoProgressBar" customModule="NicoProgress">
+                                        <rect key="frame" x="0.0" y="36" width="319" height="5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="XRN-ra-bA0"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Storyboard Progress Bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-da-9xL">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-z8-cEP">
+                                        <rect key="frame" x="0.0" y="107" width="319" height="10"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="hkN-Xw-yjZ"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Programmatic Progress Bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1x-Zx-T0r">
+                                        <rect key="frame" x="0.0" y="71" width="319" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NA2-Xn-6d9">
+                                        <rect key="frame" x="-2" y="137" width="323" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="nZu-Nl-6FE"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="progressSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="O5n-dJ-GSi"/>
+                                        </connections>
+                                    </slider>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jMX-gx-egE">
+                                        <rect key="frame" x="0.0" y="182" width="51" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="MEX-f1-6d6"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="indeterminateSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tZh-xb-1nh"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indeterminate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCQ-5d-Zw0">
+                                        <rect key="frame" x="59" y="186" width="260" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="U9C-aM-qaK" firstAttribute="leading" secondItem="VeN-F1-ZhF" secondAttribute="leading" id="0lP-bE-Rtf"/>
+                                    <constraint firstAttribute="trailing" secondItem="ahm-da-9xL" secondAttribute="trailing" id="3dH-CB-lXu"/>
+                                    <constraint firstItem="ahm-da-9xL" firstAttribute="top" secondItem="VeN-F1-ZhF" secondAttribute="top" id="5kd-Bx-TRS"/>
+                                    <constraint firstAttribute="trailing" secondItem="U9C-aM-qaK" secondAttribute="trailing" id="6Wh-Fx-xGc"/>
+                                    <constraint firstItem="NA2-Xn-6d9" firstAttribute="top" secondItem="q5y-z8-cEP" secondAttribute="top" constant="30" id="90I-Nd-1mO"/>
+                                    <constraint firstItem="xCQ-5d-Zw0" firstAttribute="centerY" secondItem="jMX-gx-egE" secondAttribute="centerY" id="I0D-Cl-Ywm"/>
+                                    <constraint firstItem="ahm-da-9xL" firstAttribute="leading" secondItem="VeN-F1-ZhF" secondAttribute="leading" id="J6N-H7-jvJ"/>
+                                    <constraint firstItem="q5y-z8-cEP" firstAttribute="top" secondItem="z1x-Zx-T0r" secondAttribute="bottom" constant="15" id="JMk-rI-ZKP"/>
+                                    <constraint firstItem="q5y-z8-cEP" firstAttribute="leading" secondItem="VeN-F1-ZhF" secondAttribute="leading" id="JV2-qB-zxE"/>
+                                    <constraint firstItem="jMX-gx-egE" firstAttribute="top" secondItem="NA2-Xn-6d9" secondAttribute="bottom" constant="15" id="RDQ-2T-QMV"/>
+                                    <constraint firstItem="NA2-Xn-6d9" firstAttribute="leading" secondItem="VeN-F1-ZhF" secondAttribute="leading" id="Uw4-2C-b8F"/>
+                                    <constraint firstAttribute="trailing" secondItem="xCQ-5d-Zw0" secondAttribute="trailing" id="bEh-4R-8WU"/>
+                                    <constraint firstAttribute="trailing" secondItem="q5y-z8-cEP" secondAttribute="trailing" id="fhL-RI-Sc5"/>
+                                    <constraint firstItem="U9C-aM-qaK" firstAttribute="top" secondItem="ahm-da-9xL" secondAttribute="bottom" constant="15" id="mEE-eb-BAr"/>
+                                    <constraint firstItem="xCQ-5d-Zw0" firstAttribute="leading" secondItem="jMX-gx-egE" secondAttribute="trailing" constant="10" id="n85-FY-Mg1"/>
+                                    <constraint firstItem="jMX-gx-egE" firstAttribute="leading" secondItem="VeN-F1-ZhF" secondAttribute="leading" id="ugF-WZ-ZLM"/>
+                                    <constraint firstItem="z1x-Zx-T0r" firstAttribute="top" secondItem="U9C-aM-qaK" secondAttribute="bottom" constant="30" id="v4F-bV-nPS"/>
+                                    <constraint firstItem="z1x-Zx-T0r" firstAttribute="leading" secondItem="VeN-F1-ZhF" secondAttribute="leading" id="w96-9Q-mhv"/>
+                                    <constraint firstAttribute="bottom" secondItem="jMX-gx-egE" secondAttribute="bottom" id="xGY-jI-ek6"/>
+                                    <constraint firstAttribute="trailing" secondItem="z1x-Zx-T0r" secondAttribute="trailing" id="yKB-zK-Bjh"/>
+                                    <constraint firstAttribute="trailing" secondItem="NA2-Xn-6d9" secondAttribute="trailing" id="zgz-zE-VHM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VeN-F1-ZhF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="28" id="29N-MZ-CqG"/>
+                            <constraint firstItem="VeN-F1-ZhF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bIz-I2-f8Y"/>
+                            <constraint firstAttribute="trailing" secondItem="VeN-F1-ZhF" secondAttribute="trailing" constant="28" id="x4t-az-VAj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indeterminateSwitch" destination="jMX-gx-egE" id="hr4-6d-g6g"/>
+                        <outlet property="indeterminateSwitchLabel" destination="xCQ-5d-Zw0" id="qx9-63-kfb"/>
+                        <outlet property="programmaticProgressBarContainer" destination="q5y-z8-cEP" id="aMW-0a-Ziy"/>
+                        <outlet property="progressSlider" destination="NA2-Xn-6d9" id="pnq-1j-SZR"/>
+                        <outlet property="storyboardProgressBar" destination="U9C-aM-qaK" id="WLN-Oh-YD3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+</document>

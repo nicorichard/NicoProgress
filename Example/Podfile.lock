@@ -1,0 +1,16 @@
+PODS:
+  - NicoProgress (0.1.0)
+
+DEPENDENCIES:
+  - NicoProgress (from `../`)
+
+EXTERNAL SOURCES:
+  NicoProgress:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NicoProgress: bc0e963032cc22179946b658c0cbc1e656f21d4b
+
+PODFILE CHECKSUM: 5e1d8d2ebe247e5072d3c04abe106f4bc8ba78e8
+
+COCOAPODS: 1.4.0
