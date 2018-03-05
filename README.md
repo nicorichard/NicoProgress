@@ -8,7 +8,7 @@
 
 I needed a simple material UI progress bar with both determinate and indeterminate states for a project I was working on. I was dissapointed that the pods I looked at did not support these features, and did not respond well to UIView changes or being added via Interface Builder. So I built this.
 
-[Example GIF](https://imgur.com/a/m3ieD)
+![Example GIF](https://media.giphy.com/media/69xlmT3rubyC6DKzKo/giphy.gif)
 
 ## Example
 
