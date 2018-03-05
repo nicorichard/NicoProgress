@@ -17,15 +17,12 @@ public enum NicoProgressBarState {
 
 //MARK: - NicoProgressBar
 open class NicoProgressBar: UIView {
-    
     //MARK: Private Properties
-    
     private var isIndeterminateAnimationRunning = false
     private var progressBarIndicator: UIView!
     private var state: NicoProgressBarState = .determinate(percentage: 0)
     
     //MARK: Public Properties
-    
     open var secondaryColor: UIColor = .lightGray {
         didSet {
             self.backgroundColor = secondaryColor
@@ -42,7 +39,6 @@ open class NicoProgressBar: UIView {
     open var determinateAnimationDuration: TimeInterval = 1.0
     
     //MARK: UIView
-    
     override public init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -72,7 +68,6 @@ open class NicoProgressBar: UIView {
     }
     
     //MARK: Setup
-    
     private func setupViews() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
@@ -86,7 +81,6 @@ open class NicoProgressBar: UIView {
     }
     
     //MARK: Public API
-    
     public func transition(to state: NicoProgressBarState, completion: ((Bool) -> Void)? = nil) {
         self.state = state
         
@@ -100,8 +94,7 @@ open class NicoProgressBar: UIView {
         }
     }
     
-    // MARK: Private Transitions
-    
+    // MARK: Private
     private func animateProgress(toPercent percent: CGFloat, completion: ((Bool) -> Void)? = nil) {
         UIView.animate(withDuration: determinateAnimationDuration, delay: 0, options: [], animations: {
             self.progressBarIndicator.frame = CGRect(x: 0, y: 0, width: self.bounds.width * percent, height: self.bounds.size.height)
@@ -111,7 +104,7 @@ open class NicoProgressBar: UIView {
     private func startIndeterminateAnimation() {
         if !isIndeterminateAnimationRunning {
             isIndeterminateAnimationRunning = true
-            runAnimationLoop()
+            runIndeterminateAnimationLoop()
         }
     }
     
@@ -131,7 +124,7 @@ open class NicoProgressBar: UIView {
         return CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 0, height: self.bounds.size.height))
     }
     
-    private func runAnimationLoop() {
+    private func runIndeterminateAnimationLoop() {
         guard let superview = self.superview else {
             stopIndeterminateAnimation()
             return
@@ -151,7 +144,7 @@ open class NicoProgressBar: UIView {
             guard let strongSelf = self else { return }
             
             if strongSelf.isIndeterminateAnimationRunning {
-                strongSelf.runAnimationLoop()
+                strongSelf.runIndeterminateAnimationLoop()
             }
         }
     }
