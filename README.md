@@ -4,6 +4,12 @@
 [![License](https://img.shields.io/cocoapods/l/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
 [![Platform](https://img.shields.io/cocoapods/p/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
 
+## About
+
+I needed a simple material UI progress bar with both determinate and indeterminate states for a project I was working on. I was dissapointed that the pods I looked at did not support these features, and did not respond well to UIView changes or being added via Interface Builder. So I built this.
+
+![Nico Progress Example Image](http://imgur.com/a/m3ieD.gif "Nico progress in action")
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
