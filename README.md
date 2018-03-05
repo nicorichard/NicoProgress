@@ -1,6 +1,5 @@
 # NicoProgress
 
-[![CI Status](http://img.shields.io/travis/CityTransit/NicoProgress.svg?style=flat)](https://travis-ci.org/CityTransit/NicoProgress)
 [![Version](https://img.shields.io/cocoapods/v/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
 [![License](https://img.shields.io/cocoapods/l/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
 [![Platform](https://img.shields.io/cocoapods/p/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
