@@ -10,6 +10,24 @@ I needed a simple material UI progress bar with both determinate and indetermina
 
 ![Example GIF](https://media.giphy.com/media/69xlmT3rubyC6DKzKo/giphy.gif)
 
+## Usage
+
+Include NicoProgressBar in your nib or add it programmatically as a subview, apply autolayout constraints.
+
+#### Colors
+```
+progressBar.primaryColor = .blue
+progressBar.secondaryColor = .white
+```
+#### Set Progress
+```
+progressBar.transition(to: .determinate(percentage: 0.5))
+```
+#### Indeterminate
+```
+progressBar.transition(to: .indeterminate)
+```
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
