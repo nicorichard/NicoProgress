@@ -20,7 +20,7 @@ open class NicoProgressBar: UIView {
     //MARK: Private Properties
     private var isIndeterminateAnimationRunning = false
     private var progressBarIndicator: UIView!
-    private var state: NicoProgressBarState = .determinate(percentage: 0)
+    private(set) var state: NicoProgressBarState = .determinate(percentage: 0)
     
     //MARK: Public Properties
     open var secondaryColor: UIColor = .lightGray {
