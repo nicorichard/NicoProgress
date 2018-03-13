@@ -4,15 +4,17 @@
 [![License](https://img.shields.io/cocoapods/l/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
 [![Platform](https://img.shields.io/cocoapods/p/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
 
+iOS implementation of the material progress bars described [by Google here](https://material.io/guidelines/components/progress-activity.html#progress-activity-types-of-indicators).
+
 ## About
 
-I needed a simple material UI progress bar with both determinate and indeterminate states for a project I was working on. I was dissapointed that the pods I looked at did not support these features, and did not respond well to UIView changes or being added via Interface Builder. So I built this.
+I needed a simple Material Design progress bar, with both determinate and indeterminate states, for a project I was working on. No other Pod I looked at supported both these features; and they did not respond well to resizes, or being added via Interface Builder.
 
 ![Example GIF](https://media.giphy.com/media/69xlmT3rubyC6DKzKo/giphy.gif)
 
 ## Usage
 
-Include NicoProgressBar in your nib or add it programmatically as a subview, apply autolayout constraints.
+Use NicoProgressBar in your nib or add it programmatically as a subview.
 
 #### Colors
 ```
@@ -27,6 +29,10 @@ progressBar.transition(to: .determinate(percentage: 0.5))
 ```
 progressBar.transition(to: .indeterminate)
 ```
+#### State
+```
+let state = progressBar.state
+```
 
 ## Example
 
@@ -35,6 +41,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Requirements
 
 iOS Deployment Target >= 8.0
+Swift 3.2 or 4
 
 ## Installation
 
