@@ -58,10 +58,11 @@ open class NicoProgressBar: UIView {
     }
     
     open override func didMoveToWindow() {
+        moveProgressBarIndicatorToStart()
+        
         super.didMoveToWindow()
         
         DispatchQueue.main.async {
-            self.moveProgressBarIndicatorToStart()
             self.transition(to: self.state)
         }
     }
