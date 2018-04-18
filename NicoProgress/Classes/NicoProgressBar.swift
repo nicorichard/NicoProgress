@@ -121,8 +121,9 @@ open class NicoProgressBar: UIView {
     }
     
     private func moveProgressBarIndicatorToStart() {
-        self.progressBarIndicator.frame = self.zeroFrame
-        self.progressBarIndicator.layoutIfNeeded()
+        progressBarIndicator.layer.removeAllAnimations()
+        progressBarIndicator.frame = zeroFrame
+        progressBarIndicator.layoutIfNeeded()
     }
     
     private var zeroFrame: CGRect {
@@ -138,7 +139,6 @@ open class NicoProgressBar: UIView {
             })
             UIView.addKeyframe(withRelativeStartTime: self.indeterminateAnimationDuration/2, relativeDuration: self.indeterminateAnimationDuration/2, animations: {
                 self.progressBarIndicator.frame = CGRect(x: self.bounds.width, y: 0, width: self.bounds.width * 0.3, height: self.bounds.size.height)
-                
             })
         }) { [weak self] _ in
             guard let strongSelf = self else { return }
