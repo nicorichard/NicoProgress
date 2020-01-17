@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Nicolas Richard' => 'nicorichard@gmail.com' }
   s.source           = { :git => 'https://github.com/CityTransit/NicoProgress.git', :tag => s.version.to_s }
+  s.swift_versions   = ['4.0', '4.2', '5.0',]
 
   s.ios.deployment_target = '8.0'
 
