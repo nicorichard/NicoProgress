@@ -9,6 +9,7 @@ internal class ViewController: UIViewController {
     @IBOutlet private weak var progressSlider: UISlider!
     @IBOutlet private weak var indeterminateSwitch: UISwitch!
     @IBOutlet private weak var indeterminateSwitchLabel: UILabel!
+    @IBOutlet private weak var button: UIButton!
     
     //MARK: Properties
     private var programmaticProgressBar: NicoProgressBar!
@@ -17,7 +18,9 @@ internal class ViewController: UIViewController {
     //MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+
+        setupViewControllerPushBugTestButton()
         setupProgressSlider()
         setupProgrammaticProgressBar()
         
@@ -27,6 +30,11 @@ internal class ViewController: UIViewController {
     //MARK: Setup
     private func setupProgressSlider() {
         progressSlider.isContinuous = false
+    }
+
+    private func setupViewControllerPushBugTestButton() {
+        button.setTitle("Push VC", for: .normal)
+        button.isHidden = true // Uncomment to test that our animation loop performs well when off-screen
     }
     
     private func setupProgrammaticProgressBar() {
@@ -75,5 +83,9 @@ internal class ViewController: UIViewController {
                 programmaticProgressBar.transition(to: state)
                 indeterminateSwitchLabel.text = NSLocalizedString("Indeterminate", comment: "")
         }
+    }
+
+    @IBAction func buttonTouchUpInside(_ sender: Any) {
+        navigationController?.pushViewController(UIViewController(), animated: true)
     }
 }

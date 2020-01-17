@@ -58,10 +58,14 @@ open class NicoProgressBar: UIView {
     }
     
     open override func didMoveToWindow() {
-        moveProgressBarIndicatorToStart()
-        
         super.didMoveToWindow()
-        
+
+        guard window != nil else {
+            stopIndeterminateAnimation()
+            return
+        }
+
+        moveProgressBarIndicatorToStart()
         DispatchQueue.main.async {
             self.transition(to: self.state)
         }
@@ -133,16 +137,19 @@ open class NicoProgressBar: UIView {
     private func runIndeterminateAnimationLoop(delay: TimeInterval = 0) {
         moveProgressBarIndicatorToStart()
         
-        UIView.animateKeyframes(withDuration: indeterminateAnimationDuration, delay: delay, options: [], animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: self.indeterminateAnimationDuration/2, animations: {
-                self.progressBarIndicator.frame = CGRect(x: 0, y: 0, width: self.bounds.width * 0.7, height: self.bounds.size.height)
+        UIView.animateKeyframes(withDuration: indeterminateAnimationDuration, delay: delay, options: [], animations: { [weak self] in
+            guard let strongSelf = self else { return }
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: strongSelf.indeterminateAnimationDuration/2, animations: { [weak self] in
+                guard let strongSelf = self else { return }
+                strongSelf.progressBarIndicator.frame = CGRect(x: 0, y: 0, width: strongSelf.bounds.width * 0.7, height: strongSelf.bounds.size.height)
             })
-            UIView.addKeyframe(withRelativeStartTime: self.indeterminateAnimationDuration/2, relativeDuration: self.indeterminateAnimationDuration/2, animations: {
-                self.progressBarIndicator.frame = CGRect(x: self.bounds.width, y: 0, width: self.bounds.width * 0.3, height: self.bounds.size.height)
+            UIView.addKeyframe(withRelativeStartTime: strongSelf.indeterminateAnimationDuration/2, relativeDuration: strongSelf.indeterminateAnimationDuration/2, animations: { [weak self] in
+                guard let strongSelf = self else { return }
+                strongSelf.progressBarIndicator.frame = CGRect(x: strongSelf.bounds.width, y: 0, width: strongSelf.bounds.width * 0.3, height: strongSelf.bounds.size.height)
             })
         }) { [weak self] _ in
             guard let strongSelf = self else { return }
-            
+
             if strongSelf.isIndeterminateAnimationRunning {
                 strongSelf.runIndeterminateAnimationLoop()
             }
