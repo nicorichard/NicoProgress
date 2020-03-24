@@ -4,13 +4,13 @@
 [![License](https://img.shields.io/cocoapods/l/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
 [![Platform](https://img.shields.io/cocoapods/p/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
 
-iOS implementation of the material progress bars described [by Google here](https://material.io/guidelines/components/progress-activity.html#progress-activity-types-of-indicators).
+iOS implementation of [material progress bars](https://material.io/guidelines/components/progress-activity.html#progress-activity-types-of-indicators).
 
 ## About
 
 I needed a simple Material Design progress bar, with both determinate and indeterminate states, for a project I was working on. No other Pod I looked at supported both these features; and they did not respond well to resizes, or being added via Interface Builder.
 
-![Example GIF](https://media.giphy.com/media/69xlmT3rubyC6DKzKo/giphy.gif)
+![Example GIF](https://i.imgur.com/zwx4B0U.gif)
 
 ## Usage
 
