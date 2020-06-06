@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
 [![License](https://img.shields.io/cocoapods/l/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
 [![Platform](https://img.shields.io/cocoapods/p/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 iOS implementation of [material progress bars](https://material.io/guidelines/components/progress-activity.html#progress-activity-types-of-indicators).
 
@@ -14,13 +15,8 @@ I needed a simple Material Design progress bar, with both determinate and indete
 
 ## Usage
 
-Use NicoProgressBar in your nib or add it programmatically as a subview.
+Add NicoProgressBar to your nib or programmatically as a subview.
 
-#### Colors
-```
-progressBar.primaryColor = .blue
-progressBar.secondaryColor = .white
-```
 #### Set Progress
 ```
 progressBar.transition(to: .determinate(percentage: 0.5))
@@ -29,9 +25,26 @@ progressBar.transition(to: .determinate(percentage: 0.5))
 ```
 progressBar.transition(to: .indeterminate)
 ```
-#### State
+
+## Customization
+
+#### Colors
 ```
-let state = progressBar.state
+progressBar.primaryColor = .blue
+progressBar.secondaryColor = .white
+```
+
+#### Duration
+```
+progressBar.indeterminateAnimationDuration = 1.5
+progressBar.determinateAnimationDuration = 1.5
+```
+
+## State
+`progressBar.state`
+```
+case indeterminate
+case determinate(percentage: CGFloat)
 ```
 
 ## Example

@@ -32,6 +32,7 @@
 		03243710248C5AAB00D5507B = {
 			isa = PBXGroup;
 			children = (
+				0363A901248C628D009A0636 /* Project */,
 				03243727248C5B7200D5507B /* Sources */,
 				0324371B248C5AAB00D5507B /* Products */,
 			);
@@ -48,11 +49,18 @@
 		03243727248C5B7200D5507B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				03243730248C5BA000D5507B /* Info.plist */,
-				0324372E248C5BA000D5507B /* NicoProgress.h */,
 				0324372F248C5BA000D5507B /* NicoProgressBar.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		0363A901248C628D009A0636 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				03243730248C5BA000D5507B /* Info.plist */,
+				0324372E248C5BA000D5507B /* NicoProgress.h */,
+			);
+			path = Project;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +279,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Project/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -297,7 +305,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Project/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
