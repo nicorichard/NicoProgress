@@ -116,8 +116,7 @@ open class NicoProgressBar: UIView {
             delay: delay,
             options: [.beginFromCurrentState],
             animations: {
-                self.progressBarIndicator.frame = CGRect(x: 0,
-                                                         y: 0,
+                self.progressBarIndicator.frame = CGRect(x: 0, y: 0,
                                                          width: self.bounds.width * percent,
                                                          height: self.bounds.size.height)
             },
@@ -161,8 +160,7 @@ open class NicoProgressBar: UIView {
                     animations: { [weak self] in
                         guard let self = self else { return }
 
-                        self.progressBarIndicator.frame = CGRect(x: 0,
-                                                                 y: 0,
+                        self.progressBarIndicator.frame = CGRect(x: 0, y: 0,
                                                                  width: self.bounds.width * 0.7,
                                                                  height: self.bounds.size.height)
                     })
@@ -173,8 +171,7 @@ open class NicoProgressBar: UIView {
                     animations: { [weak self] in
                         guard let self = self else { return }
 
-                        self.progressBarIndicator.frame = CGRect(x: self.bounds.width,
-                                                                 y: 0,
+                        self.progressBarIndicator.frame = CGRect(x: self.bounds.width, y: 0,
                                                                  width: self.bounds.width * 0.3,
                                                                  height: self.bounds.size.height)
                     })
