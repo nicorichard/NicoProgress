@@ -1,7 +1,7 @@
 import UIKit
 
 //MARK: - NicoProgressBarState
-public enum NicoProgressBarState {
+public enum NicoProgressBarState: Equatable {
     case indeterminate
     case determinate(percentage: CGFloat)
     
@@ -87,6 +87,11 @@ open class NicoProgressBar: UIView {
     
     //MARK: Public API
     public func transition(to newState: NicoProgressBarState, delay: TimeInterval = 0, completion: ((Bool) -> Void)? = nil) {
+        guard self.state != newState else {
+            completion?(false)
+            return
+        }
+
         switch self.state {
             case .indeterminate:
                 moveProgressBarIndicatorToStart()
