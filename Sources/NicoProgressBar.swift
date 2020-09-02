@@ -57,13 +57,8 @@ open class NicoProgressBar: UIView {
         self.init(frame: CGRect.zero)
     }
     
-    open override func didMoveToWindow() {
-        super.didMoveToWindow()
-
-        guard window != nil else {
-            stopIndeterminateAnimation()
-            return
-        }
+    open override func didMoveToSuperview() {
+        super.didMoveToSuperview()
 
         moveProgressBarIndicatorToStart()
         DispatchQueue.main.async {
@@ -71,6 +66,14 @@ open class NicoProgressBar: UIView {
         }
     }
     
+    open override func didMoveToWindow() {
+        super.didMoveToWindow()
+
+        if window == nil {
+            stopIndeterminateAnimation()
+        }
+    }
+
     //MARK: Setup
     private func setupViews() {
         self.translatesAutoresizingMaskIntoConstraints = false
