@@ -21,20 +21,18 @@ open class NicoProgressBar: UIView {
     private var isIndeterminateAnimationRunning = false
     private var progressBarIndicator: UIView!
     open private(set) var state: NicoProgressBarState = .indeterminate
-    
+
     //MARK: Public Properties
     @IBInspectable
     open var primaryColor: UIColor = .blue {
         didSet {
             progressBarIndicator.backgroundColor = primaryColor
-            self.layoutIfNeeded()
         }
     }
     @IBInspectable
     open var secondaryColor: UIColor = .lightGray {
         didSet {
             self.backgroundColor = secondaryColor
-            self.layoutIfNeeded()
         }
     }
     open var indeterminateAnimationDuration: TimeInterval = 1.0
@@ -57,20 +55,28 @@ open class NicoProgressBar: UIView {
         self.init(frame: CGRect.zero)
     }
 
-    open override func willMove(toSuperview newSuperview: UIView?) {
-        super.willMove(toSuperview: newSuperview)
-
-        if newSuperview == nil {
-            stopIndeterminateAnimation()
-        }
-    }
-
     open override func didMoveToSuperview() {
         super.didMoveToSuperview()
 
-        moveProgressBarIndicatorToStart()
         DispatchQueue.main.async {
-            self.transition(to: self.state)
+            self.moveProgressBarIndicatorToStart()
+            self.transition(to: self.state, animateDeterminate: false)
+        }
+    }
+
+    open override func didMoveToWindow() {
+        super.didMoveToWindow()
+
+        switch state {
+            case .indeterminate:
+                // Only run the indeterminate animation if visible on screen
+                if window == nil {
+                    stopIndeterminateAnimation()
+                } else {
+                    startIndeterminateAnimation()
+                }
+            case .determinate:
+                break
         }
     }
 
@@ -89,7 +95,7 @@ open class NicoProgressBar: UIView {
     }
     
     //MARK: Public API
-    public func transition(to newState: NicoProgressBarState, delay: TimeInterval = 0, completion: ((Bool) -> Void)? = nil) {
+    public func transition(to newState: NicoProgressBarState, delay: TimeInterval = 0, animateDeterminate: Bool = true, completion: ((Bool) -> Void)? = nil) {
         switch self.state {
             case .indeterminate:
                 moveProgressBarIndicatorToStart()
@@ -100,7 +106,7 @@ open class NicoProgressBar: UIView {
         switch newState {
             case .determinate(let percentage):
                 stopIndeterminateAnimation()
-                animateProgress(toPercent: percentage, delay: delay, completion: completion)
+                animateProgress(toPercent: percentage, delay: delay, animated: animateDeterminate, completion: completion)
             case .indeterminate:
                 startIndeterminateAnimation(delay: delay)
                 completion?(true)
@@ -110,9 +116,9 @@ open class NicoProgressBar: UIView {
     }
     
     // MARK: Private
-    private func animateProgress(toPercent percent: CGFloat, delay: TimeInterval = 0, completion: ((Bool) -> Void)? = nil) {
+    private func animateProgress(toPercent percent: CGFloat, delay: TimeInterval = 0, animated: Bool = true, completion: ((Bool) -> Void)? = nil) {
         UIView.animate(
-            withDuration: determinateAnimationDuration,
+            withDuration: animated ? determinateAnimationDuration : 0,
             delay: delay,
             options: [.beginFromCurrentState],
             animations: {
@@ -146,7 +152,7 @@ open class NicoProgressBar: UIView {
     
     private func runIndeterminateAnimationLoop(delay: TimeInterval = 0) {
         moveProgressBarIndicatorToStart()
-        
+
         UIView.animateKeyframes(
             withDuration: indeterminateAnimationDuration,
             delay: delay,
