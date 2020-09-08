@@ -10,11 +10,15 @@ internal class ViewController: UIViewController {
     @IBOutlet private weak var indeterminateSwitch: UISwitch!
     @IBOutlet private weak var indeterminateSwitchLabel: UILabel!
     @IBOutlet private weak var button: UIButton!
-    
+
+    @IBOutlet private weak var determinateZero: NicoProgressBar!
+    @IBOutlet private weak var determinateFifty: NicoProgressBar!
+    @IBOutlet private weak var determinateHundred: NicoProgressBar!
+
     //MARK: Properties
     private var programmaticProgressBar: NicoProgressBar!
     private var state: NicoProgressBarState = .indeterminate
-    
+
     //MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +27,19 @@ internal class ViewController: UIViewController {
         setupViewControllerPushBugTestButton()
         setupProgressSlider()
         setupProgrammaticProgressBar()
+        setupDeterminateProgressBars()
         
         transition(to: state)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        DispatchQueue.main.async {
+            // To animate during view creation we need to be async after view appears
+            self.determinateZero.transition(to: .determinate(percentage: 0.25))
+        }
+
     }
     
     //MARK: Setup
@@ -34,7 +49,12 @@ internal class ViewController: UIViewController {
 
     private func setupViewControllerPushBugTestButton() {
         button.setTitle("Push VC", for: .normal)
-        button.isHidden = true // Uncomment to test that our animation loop performs well when off-screen
+    }
+
+    private func setupDeterminateProgressBars() {
+        determinateZero.transition(to: .determinate(percentage: 0))
+        determinateFifty.transition(to: .determinate(percentage: 0.5))
+        determinateHundred.transition(to: .determinate(percentage: 1))
     }
     
     private func setupProgrammaticProgressBar() {
@@ -86,6 +106,12 @@ internal class ViewController: UIViewController {
     }
 
     @IBAction func buttonTouchUpInside(_ sender: Any) {
-        navigationController?.pushViewController(UIViewController(), animated: true)
+        let someVC = UIViewController()
+        someVC.view.backgroundColor = .white
+        navigationController?.pushViewController(someVC, animated: true)
+    }
+
+    private func changeColor() {
+        storyboardProgressBar.primaryColor = UIColor(red: CGFloat.random(in: 0..<255)/255, green: CGFloat.random(in: 0..<255)/255, blue: CGFloat.random(in: 0..<255)/255, alpha: 1)
     }
 }
