@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NicoProgress'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'Simple linear progress bar for indeterminate and determinate progress'
   s.description      = <<-DESC
 "A simple material UI progress bar. For indeterminate and linear progress. Supporting both programmatic and storyboard initialization."
