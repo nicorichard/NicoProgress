@@ -31,6 +31,16 @@ internal class ViewController: UIViewController {
         
         transition(to: state)
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        DispatchQueue.main.async {
+            // To animate during view creation we need to be async after view appears
+            self.determinateZero.transition(to: .determinate(percentage: 0.25))
+        }
+
+    }
     
     //MARK: Setup
     private func setupProgressSlider() {
