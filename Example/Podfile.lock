@@ -1,5 +1,5 @@
 PODS:
-  - NicoProgress (0.2.2)
+  - NicoProgress (0.3.0)
 
 DEPENDENCIES:
   - NicoProgress (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NicoProgress: c5cac5a5edd985637eea4d0675ecf310fe0fba06
+  NicoProgress: 79ef8f1debe2378f7d5e97142c4280ef4a9227b8
 
 PODFILE CHECKSUM: 20ec0e6e1c089398c46468d112532cc343410845
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
