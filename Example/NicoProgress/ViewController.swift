@@ -30,16 +30,10 @@ internal class ViewController: UIViewController {
         setupDeterminateProgressBars()
         
         transition(to: state)
-    }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        DispatchQueue.main.async {
-            // To animate during view creation we need to be async after view appears
-            self.determinateZero.transition(to: .determinate(percentage: 0.25))
-        }
-
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                            target: self,
+                                                            action: #selector(addAnotherVC))
     }
     
     //MARK: Setup
@@ -95,10 +89,12 @@ internal class ViewController: UIViewController {
         
         switch state {
             case .determinate(_):
+                progressSlider.isHidden = false
                 storyboardProgressBar.transition(to: state)
                 programmaticProgressBar.transition(to: state)
                 indeterminateSwitchLabel.text = NSLocalizedString("Determinate", comment: "")
             case .indeterminate:
+                progressSlider.isHidden = true
                 storyboardProgressBar.transition(to: state)
                 programmaticProgressBar.transition(to: state)
                 indeterminateSwitchLabel.text = NSLocalizedString("Indeterminate", comment: "")
@@ -106,9 +102,15 @@ internal class ViewController: UIViewController {
     }
 
     @IBAction func buttonTouchUpInside(_ sender: Any) {
-        let someVC = UIViewController()
-        someVC.view.backgroundColor = .white
-        navigationController?.pushViewController(someVC, animated: true)
+        let emptyVC = UIViewController()
+        emptyVC.view.backgroundColor = .white
+        navigationController?.pushViewController(emptyVC, animated: true)
+    }
+
+    @IBAction func addAnotherVC() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "ViewController")
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     private func changeColor() {
