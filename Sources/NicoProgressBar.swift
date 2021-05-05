@@ -29,6 +29,13 @@ open class NicoProgressBar: UIView {
         }
     }
 
+    @IBInspectable
+    open var secondaryColor: UIColor = .lightGray {
+        didSet {
+            self.backgroundColor = secondaryColor
+        }
+    }
+
     /*
      By default if the determine state is set before the view is rendered the progress will begin at that value
      If `animateDeterminateInitialization` is True then the progress bar will start at zero and animate to the value.
