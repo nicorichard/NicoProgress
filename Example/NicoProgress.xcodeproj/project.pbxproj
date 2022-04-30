@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,26 +12,18 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		84DBA2FE204CC6F200CAB444 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DBA2FD204CC6F200CAB444 /* Main.storyboard */; };
 		84DBA300204CC6FB00CAB444 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBA2FF204CC6FB00CAB444 /* ViewController.swift */; };
-		B57D37851EDEB301197280E2 /* Pods_NicoProgress_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAF655CF5B1B5A33D87C896 /* Pods_NicoProgress_Example.framework */; };
+		B6BBDD18281D9206002FE188 /* NicoProgress in Frameworks */ = {isa = PBXBuildFile; productRef = B6BBDD17281D9206002FE188 /* NicoProgress */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B5C83716BF6376407A60E55 /* NicoProgress.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NicoProgress.podspec; path = ../NicoProgress.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		4819835ED6B760059FA42CFB /* Pods-NicoProgress_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoProgress_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoProgress_Tests/Pods-NicoProgress_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5A2140ED81FBBCA1EEB17438 /* Pods-NicoProgress_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoProgress_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoProgress_Example/Pods-NicoProgress_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* NicoProgress_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicoProgress_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6CB4D9C2701A675AF6D7E0F2 /* Pods-NicoProgress_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoProgress_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoProgress_Example/Pods-NicoProgress_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6FA951E79CF71BB121855532 /* Pods_NicoProgress_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoProgress_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DBA2FD204CC6F200CAB444 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84DBA2FF204CC6FB00CAB444 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		89A971B5B0922596158B4433 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		8DAF655CF5B1B5A33D87C896 /* Pods_NicoProgress_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoProgress_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E45B1037F04D8BBBD1FE047C /* Pods-NicoProgress_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoProgress_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoProgress_Tests/Pods-NicoProgress_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F440D1D473E035223946B838 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B6BBDD15281D91F3002FE188 /* NicoProgress */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NicoProgress; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B57D37851EDEB301197280E2 /* Pods_NicoProgress_Example.framework in Frameworks */,
+				B6BBDD18281D9206002FE188 /* NicoProgress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,11 +41,10 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				B6BBDD14281D91F3002FE188 /* Packages */,
 				607FACD21AFB9204008FA782 /* Example for NicoProgress */,
 				607FACD11AFB9204008FA782 /* Products */,
-				F0D4455A0492DF40834B2D70 /* Pods */,
-				B937460B7389921E0AEE044B /* Frameworks */,
+				B6BBDD16281D9206002FE188 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,34 +78,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+		B6BBDD14281D91F3002FE188 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				0B5C83716BF6376407A60E55 /* NicoProgress.podspec */,
-				89A971B5B0922596158B4433 /* README.md */,
-				F440D1D473E035223946B838 /* LICENSE */,
+				B6BBDD15281D91F3002FE188 /* NicoProgress */,
 			);
-			name = "Podspec Metadata";
+			name = Packages;
 			sourceTree = "<group>";
 		};
-		B937460B7389921E0AEE044B /* Frameworks */ = {
+		B6BBDD16281D9206002FE188 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8DAF655CF5B1B5A33D87C896 /* Pods_NicoProgress_Example.framework */,
-				6FA951E79CF71BB121855532 /* Pods_NicoProgress_Tests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F0D4455A0492DF40834B2D70 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6CB4D9C2701A675AF6D7E0F2 /* Pods-NicoProgress_Example.debug.xcconfig */,
-				5A2140ED81FBBCA1EEB17438 /* Pods-NicoProgress_Example.release.xcconfig */,
-				E45B1037F04D8BBBD1FE047C /* Pods-NicoProgress_Tests.debug.xcconfig */,
-				4819835ED6B760059FA42CFB /* Pods-NicoProgress_Tests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,17 +100,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "NicoProgress_Example" */;
 			buildPhases = (
-				435CBADE020F296CB6296506 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				A914AF6D07867F9487BD3654 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = NicoProgress_Example;
+			packageProductDependencies = (
+				B6BBDD17281D9206002FE188 /* NicoProgress */,
+			);
 			productName = NicoProgress;
 			productReference = 607FACD01AFB9204008FA782 /* NicoProgress_Example.app */;
 			productType = "com.apple.product-type.application";
@@ -151,18 +128,18 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1330;
 						ProvisioningStyle = Manual;
 					};
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "NicoProgress" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
@@ -186,45 +163,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		435CBADE020F296CB6296506 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NicoProgress_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A914AF6D07867F9487BD3654 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NicoProgress_Example/Pods-NicoProgress_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/NicoProgress/NicoProgress.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NicoProgress.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NicoProgress_Example/Pods-NicoProgress_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
@@ -344,46 +282,51 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CB4D9C2701A675AF6D7E0F2 /* Pods-NicoProgress_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NicoProgress/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A2140ED81FBBCA1EEB17438 /* Pods-NicoProgress_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NicoProgress/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicorichard.NicoProgress-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -409,6 +352,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6BBDD17281D9206002FE188 /* NicoProgress */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NicoProgress;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }
