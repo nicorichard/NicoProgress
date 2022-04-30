@@ -1,9 +1,10 @@
 # NicoProgress
 
-[![Version](https://img.shields.io/cocoapods/v/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
-[![License](https://img.shields.io/cocoapods/l/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
-[![Platform](https://img.shields.io/cocoapods/p/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+![License](https://img.shields.io/cocoapods/l/NicoProgress.svg?style=flat)
+![Platform](https://img.shields.io/cocoapods/p/NicoProgress.svg?style=flat)
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/NicoProgress.svg?style=flat)](http://cocoapods.org/pods/NicoProgress)
+![SPM Compatible](https://img.shields.io/badge/Swift_Package_Manager-Compatible-4BC51D?style=flat-square)
+![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
 
 iOS implementation of [material progress bars](https://material.io/guidelines/components/progress-activity.html#progress-activity-types-of-indicators).
 
@@ -58,12 +59,32 @@ Swift 3.2 or 4
 
 ## Installation
 
-NicoProgress is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### CocoaPods
+
+Add the following to your Podfile
 
 ```ruby
 pod 'NicoProgress'
 ```
+
+### Carthage
+
+Add the following to your Cartfile
+
+```
+github "nicorichard/NicoProgress"
+```
+
+### Swift Package Manager (SPM)
+
+Add the following to your Package.swift
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/nicorichard/NicoProgress", .upToNextMajor(from: "0.4.0"))
+]
+```
+
 
 ## Author
 
